@@ -10,6 +10,9 @@ onTextOut();
 
 function onFormSubmit(evt) {
     evt.preventDefault();
+    if(formInput.email.value === '' || formInput.message.value === '') {
+        return alert ('Please fill in all the fields');
+    }
     console.log (JSON.parse(localStorage.getItem('feedback-form-state')));
 
     evt.currentTarget.reset();
@@ -26,6 +29,8 @@ function onTextOut() {
     if(savedText) {
         formInput.email.value = savedText.email;
         formInput.message.value = savedText.message;
+        formData.message = savedText.message;
+        formData.email = savedText.email;
     }
 };
 
