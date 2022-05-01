@@ -29,8 +29,8 @@ function onTextOut() {
     if(savedText) {
         formInput.email.value = savedText.email;
         formInput.message.value = savedText.message;
-        formData.message = savedText.message;
         formData.email = savedText.email;
+        formData.message = savedText.message;
     }
 };
 
