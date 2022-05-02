@@ -17,6 +17,8 @@ function onFormSubmit(evt) {
 
     evt.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
+    formData.email = '';
+    formData.message = '';
 };
 
 function onTextInput(evt) {
@@ -33,6 +35,5 @@ function onTextOut() {
         formData.message = savedText.message;
     }
 };
-
 
 
